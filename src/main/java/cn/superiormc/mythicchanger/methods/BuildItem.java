@@ -396,7 +396,7 @@ public class BuildItem {
                 for (String pattern : bannerPatternsKey.getKeys(false)) {
                     PatternType type = Enums.getIfPresent(PatternType.class, pattern.toUpperCase()).or(PatternType.BASE);
                     String bannerColor = bannerPatternsKey.getString(pattern);
-                    if (type != null && bannerColor != null) {
+                    if (bannerColor != null) {
                         DyeColor color = Enums.getIfPresent(DyeColor.class, bannerColor.toUpperCase()).or(DyeColor.WHITE);
                         banner.addPattern(new Pattern(color, type));
                     }
